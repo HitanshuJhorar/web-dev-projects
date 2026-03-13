@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Intial screen which is going to be visible first -->
+        <div class="screen active" id="initial-screen">
+            <h1>Quiz Time</h1>
+            <p>Test Your knowlegde with these fun questions</p>
+            <button class="start-btn" id="start-btn">Start Quiz</button>
+        </div>
+
+        <!-- question screen -->
+        <div class="screen" id="question-screen">
+            <div class="question-header">
+                <h2 id="question-text"></h2>
+                <div class="question-info">
+                    <p>
+                      Question <span id="current-question">1</span> of <span id="total-question">0</span>
+                    </p>
+                    <p>
+                        Score: <span id="question-score">0</span>
+                    </p>
+                </div>
+            </div>
+            <div class="question-main">
+                <div class="question-options" id="question-options">
+                    <!--futher will be added by js--> 
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Result screen which will be visible at the end -->
+         <div class="screen" id="result-screen">
+            <h1>Quiz Result</h1>
+            <div class="result-box">
+                <p>You scored <span id="current-score">0</span> out of <span id="total-score">0</span></p>
+                <div class="result-message" id="result-message"> <!--further will be addedby js--> </div>
+            </div>
+            <button class="restart-btn" id="restart-btn">Restart Quiz</button>
+         </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
