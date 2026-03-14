@@ -42,12 +42,16 @@ palettebox.addEventListener("click", (e) => {
   if(!card) return;
 
   const hex = card.querySelector(".hexvalue").textContent;
-//   const icon=document.querySelector('fi fi-rr-copy-alt click-to-copy');
-//   icon.classList.add("fi fi-br-check");
-//   icon.classList.remove("fi fi-rr-copy-alt click-to-copy");
+  const icon = card.querySelector(".click-to-copy");
 
   navigator.clipboard.writeText(hex);
   
+  icon.classList.replace("fi-rr-copy-alt","fi-br-check");
+
+    setTimeout(()=>{
+      icon.classList.replace("fi-br-check","fi-rr-copy-alt");
+    },1500);
+    
   copymsg.textContent="copied"+hex;
   copymsg.style.opacity="1";
 
