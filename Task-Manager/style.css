@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #253459;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+}
+
+.container {
+  background-color: rgb(59, 156, 195);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 6px rgb(0, 0, 0);
+}
+
+.container h1 {
+  line-height: 3rem;
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.container h1::after {
+  position: absolute;
+  height: 6px;
+  background-color: #253459;
+  width: 100%;
+  left: 50%;
+  content: "";
+  bottom: -7px;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+form {
+  backdrop-filter: blur(100px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3px;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+input {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: none;
+  width: 80%;
+  color: #253459;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #253459; /* Matches your theme */
+  border-color: #253459;
+}
+
+input[type="checkbox"]:focus {
+  outline: 2px solid #6b8feb; /* Focus indicator for accessibility */
+}
+
+#task-add {
+  background-color: #253459;
+  border: none;
+  width: 15%;
+  border-radius: 0.8rem;
+  color: aliceblue;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.tasklist {
+  display: flex;
+  flex-direction: column;
+  background-color: #6b8feb;
+  padding: 1rem;
+  border: 1px solid #253459;
+  border-radius: 1rem;
+  gap: 0.6rem;
+}
+
+.task {
+  display: flex;
+  gap: 10px;
+  backdrop-filter: blur(100px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.6rem;
+}
+.delete-btn{
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: #253459;
+}
+
+.box-btn{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.all,.active,.completed{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: none;
+
+}

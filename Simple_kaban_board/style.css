@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #89a3f8, #f8fafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9da;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 1px 5px 10px rgb(77, 72, 72);
+}
+.container h1 {
+  color: #6366f1;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.container h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 80%;
+  height: 4px;
+  background-color: #6366f1;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.to-do,
+.in-progress,
+.done {
+  border-radius: 0.7rem;
+  padding: 1rem;
+
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 300px;
+  min-width: 150px;
+}
+
+.to-do h2,
+.in-progress h2,
+.done h2 {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.to-do h2::after,
+.in-progress h2::after,
+.done h2::after{
+  content: "";
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  background-color: #89a3f8;
+  bottom: -5px;
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 10rem;
+}
+
+.box-to,.box-in,.box-do{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.task{
+  background-color: #89a3f8;
+  padding: 0.6rem;
+  width: 200px;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.task:active{
+  cursor: grabbing; 
+  transform: scale(1.08);
+}
+
+.input-box{
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #89a3f8;
+  width: 410px;
+  border-radius: 0.7rem;
+}
+
+input{
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  border: none;
+  width: 300px;
+ 
+}
+#submit{
+  padding: 0.7rem;
+  margin-left: 8px;
+  border-radius: 0.7rem;
+  border: none;
+  width: 4rem;
+}
+.delete-btn{
+  background-color: #89a3f8;
+  border: none;
+}
